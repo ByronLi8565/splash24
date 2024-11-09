@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level Select</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 600px;
+        }
+
+        .level-button {
+            width: 100px;
+            height: 100px;
+            background-color: #808080;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .level-button:hover {
+            transform: scale(1.1);
+            background-color: #666666;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Level</h1>
+    <div class="level-grid">
+        <button class="level-button" onclick="selectLevel(0)">0</button>
+        <button class="level-button" onclick="selectLevel(1)">1</button>
+        <button class="level-button" onclick="selectLevel(2)">2</button>
+        <button class="level-button" onclick="selectLevel(3)">3</button>
+        <button class="level-button" onclick="selectLevel(4)">4</button>
+        <button class="level-button" onclick="selectLevel(5)">5</button>
+        <button class="level-button" onclick="selectLevel(6)">6</button>
+        <button class="level-button" onclick="selectLevel(7)">7</button>
+    </div>
+
+    <script>
+        function selectLevel(level) {
+            // For now, just alert the selected level
+            alert(`Selected level ${level}`);
+            // Later we can add navigation to the actual game levels
+        }
+    </script>
+</body>
+</html>
